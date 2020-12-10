@@ -1,0 +1,107 @@
+<html>
+
+
+<!--
+    Name: Andrew Graetzer
+    Assignment (8): Part 1 - Series of Intergers
+    Description: : Design and implement a program that asks the user to enter an arbitrary
+    number of positive and negative intergers
+
+    - Each time the user enters an interger the program asks whether the user wants to enter one more. (Store the intergers in the array).
+    - Use a loop to output all the intergers stored in array in two groups: first output all negative intergers and their sum, then output
+    all positive integers and their sum.
+    --- Do not output 0 even if it is present in the array ---
+   
+    --- How the output should be:                                ---
+    --- You entered the following negative integers: -4, -7, -1  ---
+    --- The sum of all negative integers is: -12                 ---
+    --- You entered the following positive integers: 1, 10, 3 ,5 ---
+    --- The sum of all positive integers is: 19                  ---
+
+-->
+
+
+<head>
+
+  
+  <!-- Display title for the function to the page -->
+
+  <title>
+    Series of Integers
+  </title>
+
+
+</head>
+
+
+<body>
+
+
+  <script>
+
+    // Creates an Array so that when the user is prompted to enter numbers within the script, it will be added.
+
+    var numbers = new Array();
+
+    // sets Variables to parseInt's so that they can be used, called, and displayed in the page 
+
+    var positive = parseInt;
+    var negative = parseInt;
+
+    // Prompts the user to enter numbers over and over again so that they can be added to the Array and be used within the script.
+
+    var keepGoing = true;
+    while (keepGoing) {
+      var n = parseFloat(prompt("Enter a positive or negative integer.", "5"));
+      numbers.push(n);
+      keepGoing = confirm("One more time?");
+    }
+    // print out only even values from array
+
+    // for Variable counts all of the numbers in the Array and determines if the numbers are divisible by 2 or not,
+    // if so it adds it onto the positive variable, and if not it adds it to the negative variable so they can be totaled
+    // later on within the script.
+
+    document.write("<p>");
+    for (var i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 == 0) {
+        positive++;
+      }
+      else {
+        negative++;
+      }
+    }
+
+    // Variables are created to set the positiveTotal and negativeTotal to parseInt's so that they can be
+    // called and used later to be displayed to the page.
+
+    var positiveTotal = parseInt;
+    var negativeTotal = parseInt;
+
+    // Sets the positiveTotal and negativeTotal to be totaled and added through this formular
+
+    positiveTotal = numbers[i] + positive;
+    negativeTotal = numbers[i] + negative;
+
+
+    // Writes to the page the following positive numbers that you had entered in the number Array,
+    // and sums all of the positive numbers that you have entered as well.
+
+    document.write("You entered the following positive integers = " + positive + " ");
+    document.write(numbers.join(", ") + "</p>");
+    document.write("Sum of all positive integers = " + positiveTotal);
+
+    // Writes to the page the following negative numbers that you had entered in the number Array,
+    // and sums all of the negative numbers that you have entered as well.
+
+    document.write("<p>You entered the following negative integers = " + negative + " ");
+    document.write(numbers.join(", ") + "</p>");
+    document.write("Sum of all negative integers = " + negativeTotal);
+
+  </script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,88 @@
+<html>
+
+<!--
+    Name: Andrew Graetzer
+    Assignment (8): Part 2 - Array Analysis Function
+    Description: : Write a function "countOccurences(numArray, num)" that takes an array
+    of numbers and a number as a parameter
+
+    - The function counts and returns a number of times a given number has been repeated in the array
+    --- Ex: Given the array: var numbers = [1,1,5,6,2,11,1,8,0]. If we call the function "countOccurences(numbers, 1),"
+    it will return 3, because 1 is repeated in the given array 3 times. ---
+    - In the main script, create an array of numbers, call the function and print the result to the page.
+    - Your output must be formatted as show: "The number of occurrences of 1 in [1,1,5,6,2,11,1,6,0] is 3"
+-->
+
+<head>
+
+
+    <!-- Display title for the function to the page -->
+
+    <title>
+        Array Analysis Function
+    </title>
+
+
+</head>
+
+
+<body>
+
+
+    <script>
+
+
+        // Create a function "countOccurences" that can be returned and displayed to the page
+
+        function countOccurences(numbers, num) {
+
+            // Set a new Array so that numbers can be entered and counted within the function
+
+            var numbers = new Array();
+
+            // Create the variable to start the sequence of number entering by prompting the user
+            //      to continuosly enter numbers until they cancel and pick the number within the array
+            //      that they would like to count.
+
+            var keepGoing = true;
+            while (keepGoing) {
+                var n = parseFloat(prompt("Enter an integer.", "12"));
+                numbers.push(n);
+                keepGoing = confirm("One more time?");
+            }
+
+            // Variable is created and prompt the user to enter a number that they would like to count within the Array
+
+            var num = parseFloat(prompt("Enter a Number That You Would Like to Count in the Array.", "1"));
+
+            // Sets the countedNum to a parseInt so it can be called and used later within the document
+
+            var countedNum = parseInt;
+
+            // Function returns all variables and values and displays it to the page
+
+            return countOccurences;
+            
+        }
+
+        // Create an if statement that counts the amount of the number that was entered by the user, and add it to the countedNum
+        // variable so that it can be displayed to the page
+
+        if (num) {
+            countedNum++;
+        }
+
+        // Variables are displayed with text in order to show the user the numbers that they have entered,
+        // and count the number that they had selected and display it to the page as well.
+
+        document.write("The Number of Occurences of " + num + " in " + " [ ");
+        document.write(numbers.join(", "));
+        document.write(" ] is " + countedNum);
+
+    </script>
+
+
+</body>
+
+
+</html>
